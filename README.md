@@ -1,73 +1,126 @@
-# Welcome to your Lovable project
+# **Taskflow — Scalable Task Management Web App**
 
-## Project info
+Taskflow is a simple, fast, and responsive task-management app built for a 3-day assignment. It brings together a modern frontend, a lightweight backend, secure JWT authentication, and an easy-to-use dashboard designed with scalability in mind.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌟 **Overview**
 
-## How can I edit this code?
+Taskflow allows users to create, view, update, and manage their tasks easily. The project shows how the frontend (React/Next.js) and backend (Node/Express) work smoothly together, with secure login/signup and a well-organized structure that can grow into a production-level application.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 **Features**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### **Frontend (React/Next.js)**
 
-Changes made via Lovable will be committed automatically to this repo.
+* Responsive UI crafted with TailwindCSS
+* Clean, accessible layout that adapts gracefully across screens
+* Client-side & server-side form validation
+* Protected routes for authenticated users
+* Search and filter capabilities within the dashboard
+* Logout flow that cleanly clears auth state
 
-**Use your preferred IDE**
+### **Backend (Node.js + Express)**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* Lightweight REST API with modular routing
+* JWT-based authentication (login/signup)
+* Password hashing with bcrypt
+* Protected endpoints via JWT middleware
+* CRUD routes for tasks
+* User profile fetch/update APIs
+* Centralized error handling & request validation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### **Database**
 
-Follow these steps:
+* Supabase models with clean schema definitions
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧭 **Dashboard Features**
 
-# Step 3: Install the necessary dependencies.
-npm i
+* Authenticated access
+* User profile display (fetched from backend)
+* Add, edit, delete, and view tasks
+* Search and filtering to quickly navigate through tasks
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🔐 **Security**
+
+* Hashed passwords (bcrypt)
+* JWT signing & verification
+* Secure middleware for protected routes
+* Validation for request bodies
+* Organized environment variable handling
+
+---
+
+## 🧱 **Tech Stack**
+
+### **Frontend**
+
+* React.js / Next.js
+* TailwindCSS
+* React Hooks & Context
+
+### **Backend**
+
+* Node.js
+* Express.js
+* JSON Web Tokens (JWT)
+* Supabase
+
+---
+
+### **Frontend Setup**
+
+```bash
+cd frontend
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Frontend will boot on your local dev port.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📬 **API Documentation**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+A Postman collection (or API docs file) is included in the repository for easy testing of authentication, profile actions, and CRUD operations.
 
-## What technologies are used for this project?
+Endpoints include:
 
-This project is built with:
+* `/api/auth/signup`
+* `/api/auth/login`
+* `/api/users/profile`
+* `/api/tasks/` (CRUD)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 📈 **Scalability Notes**
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Taskflow is structured with a scaling mindset:
 
-## Can I connect a custom domain to my Lovable project?
+* Frontend separates UI logic, API logic, shared state, and components
+* Backend adopts controller-service-model patterns for modularity
+* Middlewares are isolated for future additions like rate limiting
+* Environment configuration supports multi-environment deployment
+* API routes are organized for easy versioning (ex: `/api/v1/...`)
+* Deployment-ready with minimal adjustments
 
-Yes, you can!
+Future Scalability Options:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+* Move to microservices or serverless functions
+* Add caching (Redis), logging pipeline, rate limiting
+* Integrate CI/CD for automated deployment
+* Add role-based access control
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 🎯 **Deliverables Summary**
+
+* Fully functional frontend + backend in this repository
+* JWT-based authentication & logout
+* Dashboard with CRUD operations
+* Architecture designed for real-world scaling
+
+---

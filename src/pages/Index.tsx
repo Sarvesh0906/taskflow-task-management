@@ -39,7 +39,7 @@ export default function Index() {
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Manage Your Tasks<span className="block text-primary">With Confidence</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto py-10">
             A simple, secure, and scalable task management application. Sign up today and take control of your productivity.
           </p>
           <Link to="/auth">
@@ -66,7 +66,7 @@ export default function Index() {
 
       <footer className="border-t py-8">
         <div className="container text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} TaskFlow. Built with React & Lovable Cloud.</p>
+          <p>&copy; {new Date().getFullYear()} TaskFlow</p>
         </div>
       </footer>
     </div>
